@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import socialLinks from "../content/static/social-links.json";
 
 </script>
 
@@ -22,10 +23,10 @@
         </ul>
         <ul class="space-y-1 lg:text-right">
           <li>
-            <a href="https://linkedin.com/axel-vair" target="_blank" rel="noreferrer" class="py-1 inline-block hover:text-black hover:underline">Linkedin</a>
+            <a :href="socialLinks.linkedin" target="_blank" rel="noreferrer" class="py-1 inline-block hover:text-black hover:underline">Linkedin</a>
           </li>
           <li>
-            <a href="https://github.com/axel-vair" target="_blank" rel="noreferrer" class="py-1 inline-block hover:text-black hover:underline">GitHub</a>
+            <a :href="socialLinks.github" target="_blank" rel="noreferrer" class="py-1 inline-block hover:text-black hover:underline">GitHub</a>
           </li>
         </ul>
       </div>
