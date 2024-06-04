@@ -16,8 +16,8 @@ defineProps({
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 my-20 lg:my-32 items-center">
     <div>
-      <h1 class="text-5xl font-extrabold leading-[1.14em]" v-html="title"></h1>
-      <p v-if="subtitle" class="mt-5 text-2xl text-gray-500 leading-8">{{ subtitle }}</p>
+      <h1 class="text-slate-800 text-5xl font-extrabold leading-[1.14em]" v-html="title"></h1>
+      <p v-if="subtitle" class="mt-5 text-xl text-gray-600 leading-8">{{ subtitle }}</p>
     </div>
 
     <div class="flex justify-end">

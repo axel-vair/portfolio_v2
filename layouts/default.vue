@@ -7,7 +7,7 @@
   <Header></Header>
 
   <!-- Output the page content -->
-  <div class="px-5 max-w-6xl mx-auto my-20 lg:my-32">
+  <div class=" px-5 max-w-6xl mx-auto my-20 lg:my-32">
   <NuxtPage />
   </div>
 
