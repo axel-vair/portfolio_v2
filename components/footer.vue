@@ -17,9 +17,9 @@ import socialLinks from "../content/static/social-links.json";
           <li>
             <a class="py-1 inline-block hover:text-black hover:underline" href="/blog">Blog</a>
           </li>
-          <li>
-            <a href="/blog/rss.xml" target="_blank" rel="noreferrer" class="py-1 inline-block hover:text-black hover:underline">RSS</a>
-          </li>
+<!--          <li>-->
+<!--            <a href="/blog/rss.xml" target="_blank" rel="noreferrer" class="py-1 inline-block hover:text-black hover:underline">RSS</a>-->
+<!--          </li>-->
         </ul>
         <ul class="space-y-1 lg:text-right">
           <li>
