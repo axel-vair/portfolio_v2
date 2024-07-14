@@ -15,7 +15,7 @@ import socialLinks from "~/content/static/social-links.json";
   <main>
     <section>
       <Grid class="my-20 gap-y-20 text-xl">
-        <div class="col-span-3 xs:mx-5 sm:mx-5">
+        <div class="col-span-3">
           <h2 class="text-slate-800 mt-8 mb-5 text-3xl font-bold">Qui suis-je ?</h2>
           <p class="text-slate-700 text-xl leading-8">
             Né dans les années 90, j'ai dédié la première partie de ma vie à la littérature. Après un master en
