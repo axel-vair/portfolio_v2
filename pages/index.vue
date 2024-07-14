@@ -47,24 +47,23 @@ import socialLinks from "~/content/static/social-links.json";
       </Grid>
     </section>
 
-    <div class="flex ml-20 mx-auto mb-20">
-      <div>
-        <img src="/public/img/angular_logo_icon.png" alt="logo angular">
+    <div class="flex ml-20 mx-auto mb-20 sm:flex">
+      <div class="hidden sm:block">
+        <img src="/public/img/angular_logo_icon.png" loading="lazy" alt="logo angular">
       </div>
-      <div>
-        <img src="/public/img/boot_spring_logo_icon.png" alt="logo spring boot">
+      <div class="hidden sm:block">
+        <img src="/public/img/boot_spring_logo_icon.png" loading="lazy" alt="logo spring boot">
       </div>
-      <div>
-        <img src="/public/img/electron_logo_icon.png" alt="logo electron">
+      <div class="hidden sm:block">
+        <img src="/public/img/electron_logo_icon.png" loading="lazy" alt="logo electron">
       </div>
-      <div>
-        <img src="/public/img/symfony_logo_icon.png" alt="logo symfony">
+      <div class="hidden sm:block">
+        <img src="/public/img/symfony_logo_icon.png" loading="lazy" alt="logo symfony">
       </div>
-      <div>
-        <img src="/public/img/vuejs_icon.png" alt="logo vuejs">
+      <div class="hidden sm:block">
+        <img src="/public/img/vuejs_icon.png" loading="lazy" alt="logo vuejs">
       </div>
     </div>
-
     <section>
       <div class="mx-0 max-w-screen-xl py-8 sm:py-12">
         <div class="mx-auto max-w-lg text-center">
@@ -177,7 +176,8 @@ import socialLinks from "~/content/static/social-links.json";
     <section class="rounded-lg bg-slate-100 p-8 lg:mt-10">
       <h2 class="text-slate-800 mb-5 text-3xl font-bold">Contact</h2>
       <div class="flex flex-col md:flex-row items-center">
-        <p class="text-lg text-slate-700 md:w-2/3 mb-4 md:mb-0 md:pr-4">Pour ne rien rater de mes annonces ou de mes projets. Suivez-moi sur Linkedin pour me poser une question ou simplement discuter de sujets techniques.</p>
+        <p class="text-lg text-slate-700 md:w-2/3 mb-4 md:mb-0 md:pr-4">Pour ne rien rater de mes annonces ou de mes
+          projets. Suivez-moi sur Linkedin pour me poser une question ou simplement discuter de sujets techniques.</p>
         <div class="flex-grow flex justify-center items-center">
           <a :href="socialLinks.linkedin"
              target="_blank"
