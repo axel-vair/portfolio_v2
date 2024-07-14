@@ -8,7 +8,10 @@ export default defineNuxtConfig({
             type: "image/svg+xml",
             href: "/favicon.svg"
           }
-        ]
+        ],
+      meta: [
+        { name: 'robots', content: 'index, follow' }
+      ]
       }
     },
   devtools: { enabled: true },
