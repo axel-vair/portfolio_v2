@@ -6,46 +6,49 @@
     <div class="px-5 max-w-6xl mx-auto flex items-center justify-between gap-10">
       <NuxtLink to="/">
         <div class="logo-container">
-          <svg class="logo" viewBox="0 0 100 100" width="50" height="50">
-            <rect x="10" y="10" width="80" height="80" rx="7" ry="7" fill="#000000" class="bg" />
-            <path d="M50 30 L70 70 H30 Z" fill="#ffffff" class="a-triangle" />
-            <path d="M50 40 L60 60 H40 Z" fill="#000000" class="v-triangle" />
+          <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+            <rect x="0" y="0" width="32" height="32" rx="5" ry="5" fill="#000000" class="bg"/>
+            <path d="M16 8 L24 24 H8 Z" fill="#ffffff" class="a-triangle"/>
+            <path d="M16 12 L20 20 H12 Z" fill="#000000" class="v-triangle"/>
           </svg>
         </div>
       </NuxtLink>
       <nav class="-mr-3">
-          <NuxtLink class="p-3 text-gray-500 hover:text-gray-600" to="/">
-            À propos
-          </NuxtLink>
-          <NuxtLink class="p-3 text-gray-500 hover:text-gray-600" to="/blog">
-            Blog
-          </NuxtLink>
+        <NuxtLink class="p-3 text-gray-500 hover:text-gray-600" to="/">
+          À propos
+        </NuxtLink>
+        <NuxtLink class="p-3 text-gray-500 hover:text-gray-600" to="/blog">
+          Blog
+        </NuxtLink>
       </nav>
     </div>
   </header>
 </template>
 
 <style scoped>
-  .router-link-exact-active {
-    color: black;
-  }
-  .logo-container {
-    display: inline-block;
-    position: relative;
-  }
+.router-link-exact-active {
+  color: black;
+}
+.logo-container {
+  display: inline-block;
+  position: relative;
+  width: 42px;
+  height: 42px;
+}
 
-  .logo {
-    display: block;
-  }
+.logo-svg {
+  width: 100%;
+  height: 100%;
+}
 
-  .logo .bg,
-  .logo .a-triangle,
-  .logo .v-triangle {
-    transition: fill 0.3s ease;
-  }
+.logo .bg,
+.logo .a-triangle,
+.logo .v-triangle {
+  transition: fill 0.3s ease;
+}
 
-  .logo:hover .bg,
-  .logo:hover .v-triangle {
-    fill: #343a40;
-  }
+.logo-container:hover .bg,
+.logo-container:hover .v-triangle {
+  fill: #343a40;
+}
 </style>
