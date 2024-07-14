@@ -19,29 +19,28 @@ import socialLinks from "~/content/static/social-links.json";
           <h2 class="text-slate-800 mt-8 mb-5 text-3xl font-bold">Qui suis-je ?</h2>
           <p class="text-slate-700 text-xl leading-8">
             Né dans les années 90, j'ai dédié la première partie de ma vie à la littérature. Après un master en
-            recherche en littérature, un master en science de l'éducation et quelques année poche, je décide de me
-            réorienter professionnellement.
+            recherche en littérature, un master en science de l'éducation et quelques années dans le domaine.
           </p>
           <br>
           <p class="text-slate-700 text-xl leading-8">
-            Je découvre le développement à l'université et du fait de cette expérience positive, je décide de préparer
-            un diplôme de Concepteur, Développeur d'Applications en alternance.
+            J'ai découvert le développement informatique à l'université. Aussi, je décide de préparer
+            un diplôme de Concepteur, Développeur d'Application dans le cadre d'une réorientation professionnelle.
           </p>
         </div>
         <div class="col-span-3">
           <div class="bg-gradient-to-t from-transparent to-gray-100 p-8 rounded-xl">
             <h2 class="mb-5 text-slate-800 text-3xl font-bold">Et maintenant ? </h2>
             <p class="text-slate-700 text-xl leading-8">
-              En alternance depuis dans une institution française, je travaille comme développeur fullstack.
-            </p>
-            <br>
-            <p class="text-slate-700 text-xl leading-8">
-              J'utilise Figma et Lucany pour maquetter les applications que je souhaite développer.
+              En alternance dans une institution française, je travaille comme développeur web fullstack.
             </p>
             <br>
             <p class="text-slate-700 text-xl leading-8">
               Pour développer mes applications, j'utilise au quotidien des technologies comme Symfony, Spring Boot,
-              VueJS, Angular, Electron.
+              VueJS, Angular, React, Electron.
+            </p>
+            <br>
+            <p class="text-slate-700 text-xl leading-8">
+              J'ai eu un coup de coeur pour Symfony, VueJS (et Nuxt).
             </p>
           </div>
         </div>
