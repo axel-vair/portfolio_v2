@@ -2,7 +2,6 @@
 
 </script>
 <template>
-
   <!-- Header -->
   <Header></Header>
 
