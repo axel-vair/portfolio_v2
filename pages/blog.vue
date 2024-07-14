@@ -2,28 +2,6 @@
 
 </script>
 <template>
-  <!-- HTML Meta Tags -->
-  <title>Portfolio d'Axel Vair</title>
-  <meta name="description" content="Axel Vair est un développeur web et mobile full stack basé sur Marseille. Il a une expérience variée et une soif d'apprendre qui lui permet de réaliser des projets de qualité.">
-
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:url" content="https://axelvair.fr">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Portfolio d'Axel Vair">
-  <meta property="og:description" content="Axel Vair est un développeur web et mobile full stack basé sur Marseille. Il a une expérience variée et une soif d'apprendre qui lui permet de réaliser des projets de qualité.">
-  <meta property="og:image" content="https://axelvair.fr/ogimage.svg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="axelvair.fr">
-  <meta property="twitter:url" content="https://axelvair.fr">
-  <meta name="twitter:title" content="Portfolio d'Axel Vair">
-  <meta name="twitter:description" content="Axel Vair est un développeur web et mobile full stack basé sur Marseille. Il a une expérience variée et une soif d'apprendre qui lui permet de réaliser des projets de qualité.">
-  <meta name="twitter:image" content="https://axelvair.fr/ogimage.svg">
-
-  <!-- Meta Tags Generated via https://opengraph.dev -->
   <div class="flex flex-col justify-center items-center">
     <div class="text-center">
       <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">Blog en construction</h1>

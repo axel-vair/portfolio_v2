@@ -16,7 +16,7 @@ import socialLinks from "~/content/static/social-links.json";
     <section>
       <Grid class="my-20 gap-y-20 text-xl">
         <div class="col-span-3">
-          <h2 class="text-slate-800 mt-8 mb-5 text-3xl font-bold">Qui suis-je ?</h2>
+          <h2 class="tex)t-slate-800 mt-8 mb-5 text-3xl font-bold">Qui suis-je ?</h2>
           <p class="text-slate-700 text-xl leading-8">
             Né dans les années 90, j'ai dédié la première partie de ma vie à la littérature. Après un master en
             recherche en littérature, un master en science de l'éducation et quelques années dans le domaine.
@@ -182,7 +182,9 @@ import socialLinks from "~/content/static/social-links.json";
           <a :href="socialLinks.linkedin"
              target="_blank"
              rel="noreferrer"
-             class="flex-shrink-0">
+             class="flex-shrink-0"
+             aria-label="Linkedin logo"
+          >
             <Icon name="bxl:linkedin" class="text-gray-500 hover:text-black transition duration-300" size="40"/>
           </a>
         </div>

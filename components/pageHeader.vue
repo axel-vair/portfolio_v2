@@ -25,13 +25,17 @@ defineProps({
           :href="socialLinks.github"
           target="_blank"
           rel="noreferrer"
-          class="mr-5">
+          class="mr-5"
+          aria-label="Github logo"
+      >
         <Icon name="uil:github" class="text-gray-500 hover:text-black transition duration-300" size="40"/>
       </a>
 
       <a :href="socialLinks.linkedin"
          target="_blank"
-         rel="noreferrer">
+         rel="noreferrer"
+         aria-label="Linkedin logo"
+      >
         <Icon name="bxl:linkedin" class="text-gray-500 hover:text-black transition duration-300" size="40"/>
       </a>
     </div>
