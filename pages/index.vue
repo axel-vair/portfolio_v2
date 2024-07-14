@@ -1,5 +1,6 @@
 <script setup lang="ts">
 
+import socialLinks from "~/content/static/social-links.json";
 </script>
 
 <template>
@@ -64,10 +65,11 @@
         <img src="/public/img/vuejs_icon.png" alt="logo vuejs">
       </div>
     </div>
+
     <section>
-      <div class="mx-0 max-w-screen-xl py-8 sm:py-12 lg:py-16">
+      <div class="mx-0 max-w-screen-xl py-8 sm:py-12">
         <div class="mx-auto max-w-lg text-center">
-          <h2 class="text-3xl font-bold sm:text-4xl">Sélection de projets</h2>
+          <h2 class="text-3xl font-bold sm:text-4xl lg:pb-10">Sélection de projets</h2>
         </div>
 
         <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -94,7 +96,7 @@
 
             <h2 class="mt-4 text-xl font-bold text-black">Boutique en ligne</h2>
 
-            <p class="mt-1 text-sm text-gray-800">
+            <p class="mt-1 text-md text-gray-800">
               Une boutique en ligne développée avec Symfony et Twig. Création d'interfaces utilisateur dynamiques avec
               Twig, Stimulus et Turbo Frames.
             </p>
@@ -122,7 +124,7 @@
 
             <h2 class="mt-4 text-xl font-bold text-black">Portfolio Nuxt</h2>
 
-            <p class="mt-1 text-sm text-gray-800">
+            <p class="mt-1 text-md text-gray-800">
               Mon portfolio personnel créé avec Nuxt.js. Ce site vitrine m'a permis
               d'explorer en profondeur les fonctionnalités de Nuxt.
             </p>
@@ -155,7 +157,7 @@
 
             <h2 class="mt-4 text-xl font-bold text-black">À suivre</h2>
 
-            <p class="mt-1 text-sm text-gray-800">
+            <p class="mt-1 text-md text-gray-800">
               D'autres projets viendront à terme compléter cette sélection.
             </p>
           </a>
@@ -173,6 +175,20 @@
       </div>
     </section>
 
+    <section class="rounded-lg bg-slate-100 p-8 lg:mt-10">
+      <h2 class="text-slate-800 mb-5 text-3xl font-bold">Contact</h2>
+      <div class="flex flex-col md:flex-row items-center">
+        <p class="text-lg text-slate-700 md:w-2/3 mb-4 md:mb-0 md:pr-4">Pour ne rien rater de mes annonces ou de mes projets. Suivez-moi sur Linkedin pour me poser une question ou simplement discuter de sujets techniques.</p>
+        <div class="flex-grow flex justify-center items-center">
+          <a :href="socialLinks.linkedin"
+             target="_blank"
+             rel="noreferrer"
+             class="flex-shrink-0">
+            <Icon name="bxl:linkedin" class="text-gray-500 hover:text-black transition duration-300" size="40"/>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 

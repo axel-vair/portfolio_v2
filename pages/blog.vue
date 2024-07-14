@@ -1,3 +1,6 @@
+<script setup lang="ts">
+
+</script>
 <template>
   <div class="flex flex-col justify-center items-center">
     <div class="text-center">
@@ -37,5 +40,5 @@
 </template>
 
 <style scoped>
-/* Vous pouvez ajouter des styles spécifiques ici si nécessaire */
+
 </style>
