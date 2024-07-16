@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import socialLinks from "~/content/static/social-links.json";
 </script>
 
