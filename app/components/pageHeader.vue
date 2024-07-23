@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import socialLinks from "../content/static/social-links.json";
+import socialLinks from "~/content/static/social-links.json";
 
 defineProps({
   title: {

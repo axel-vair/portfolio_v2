@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import socialLinks from "../content/static/social-links.json";
+import socialLinks from "~/content/static/social-links.json";
 
 </script>
 
@@ -12,7 +12,7 @@ import socialLinks from "../content/static/social-links.json";
         </div>
         <ul class="lg:col-start-5 space-y-1 lg:text-right">
           <li>
-            <a class="py-1 inline-block hover:text-black hover:underline" href="/">Accueil</a>
+            <a class="py-1 inline-block hover:text-black hover:underline" href="/public">Accueil</a>
           </li>
           <li>
             <a class="py-1 inline-block hover:text-black hover:underline" href="/blog">Blog</a>

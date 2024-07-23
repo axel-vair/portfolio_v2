@@ -48,19 +48,19 @@ import socialLinks from "~/content/static/social-links.json";
 
     <div class="flex ml-20 mx-auto mb-20 sm:flex">
       <div class="hidden sm:block">
-        <img src="/public/img/angular_logo_icon.png" loading="lazy" alt="logo angular">
+        <img src="/img/angular_logo_icon.png" loading="lazy" alt="logo angular">
       </div>
       <div class="hidden sm:block">
-        <img src="/public/img/boot_spring_logo_icon.png" loading="lazy" alt="logo spring boot">
+        <img src="/img/boot_spring_logo_icon.png" loading="lazy" alt="logo spring boot">
       </div>
       <div class="hidden sm:block">
-        <img src="/public/img/electron_logo_icon.png" loading="lazy" alt="logo electron">
+        <img src="/img/electron_logo_icon.png" loading="lazy" alt="logo electron">
       </div>
       <div class="hidden sm:block">
-        <img src="/public/img/symfony_logo_icon.png" loading="lazy" alt="logo symfony">
+        <img src="/img/symfony_logo_icon.png" loading="lazy" alt="logo symfony">
       </div>
       <div class="hidden sm:block">
-        <img src="/public/img/vuejs_icon.png" loading="lazy" alt="logo vuejs">
+        <img src="/img/vuejs_icon.png" loading="lazy" alt="logo vuejs">
       </div>
     </div>
     <section>
