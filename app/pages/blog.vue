@@ -46,6 +46,6 @@
   </div>
 </template>
 
-<style scoped>æ
+<style scoped>
 
 </style>
