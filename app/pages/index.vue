@@ -1,5 +1,18 @@
 <script setup lang="ts">
 import socialLinks from "~/content/static/social-links.json";
+const {error, pending, data} = await useFetch('https://api.github.com/users/axel-vair/repos')
+const displayCount = ref(6)
+const loadMore = () => {
+  displayCount.value += 6;
+};
+
+const sortedRepositories = computed(() => {
+  return data.value
+      ? [...data.value]
+          .filter(repo => repo.name !== 'axel-vair') // Exclure le repository de profil
+          .sort((a, b) => b.stargazers_count - a.stargazers_count) // Trier par popularité
+      : [];
+});
 </script>
 
 <template>
@@ -68,99 +81,42 @@ import socialLinks from "~/content/static/social-links.json";
         <div class="mx-auto max-w-lg text-center">
           <h2 class="text-3xl font-bold sm:text-4xl lg:pb-10">Sélection de projets</h2>
         </div>
-
-        <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div v-if="pending">Chargement...</div>
+        <div v-else-if="error">Une erreur s'est produite, veuillez réessayer...</div>
+        <div v-else class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <a
-              class="block rounded-xl border border-gray-300 p-8 shadow-xl transition hover:border-red-500/10 hover:shadow-red-500/10"
-              href="https://github.com/axel-vair/symfony-shop"
+              v-for="repository in sortedRepositories.slice(0, displayCount)"
+              :key="repository.id"
+              :href="repository.html_url"
               target="_blank"
-          >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="size-10 text-red-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-            >
-              <path d="M3 3h18v18H3z"/>
-              <path d="M3 9h18"/>
-              <path d="M9 21V9"/>
-              <circle cx="6" cy="6" r="1"/>
-              <circle cx="18" cy="6" r="1"/>
-              <path d="M12 14h4"/>
-              <path d="M12 17h4"/>
-            </svg>
-
-            <h2 class="mt-4 text-xl font-bold text-black">Boutique en ligne</h2>
-
-            <p class="mt-1 text-md text-gray-800">
-              Une boutique en ligne développée avec Symfony et Twig. Création d'interfaces utilisateur dynamiques avec
-              Twig, Stimulus et Turbo Frames.
-            </p>
-          </a>
-
-          <a
               class="block rounded-xl border border-gray-300 p-8 shadow-xl transition hover:border-red-500/10 hover:shadow-red-500/10"
-              href="https://github.com/axel-vair/portfolio_v2"
-              target="_blank"
           >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="size-10 text-red-500"
-                fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                width="33"
+                height="33"
             >
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-              <path d="M3 9h18"/>
-              <path d="M9 21V9"/>
-              <path d="M15 21V9"/>
-              <path d="M6 6h.01"/>
-              <path d="M18 6h.01"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.207 11.387.6.111.793-.26.793-.577 0-.285-.01-1.042-.015-2.048-3.338.724-4.043-1.607-4.043-1.607-.546-1.387-1.333-1.758-1.333-1.758-1.089-.743.083-.728.083-.728 1.204.085 1.836 1.237 1.836 1.237 1.067 1.827 2.8 1.297 3.48.993.108-.774.418-1.297.76-1.597-2.665-.303-5.466-1.333-5.466-5.933 0-1.313.469-2.384 1.236-3.22-.124-.303-.536-1.53.117-3.176 0 0 1.007-.322 3.301 1.23.957-.266 1.986-.398 3.006-.402 1.02.004 2.049.136 3.006.402 2.294-1.552 3.301-1.23 3.301-1.23.653 1.646.241 2.873.118 3.176.768.836 1.236 1.907 1.236 3.22 0 4.608-2.805 5.63-5.474 5.93.43.372.815 1.104.815 2.224 0 1.606-.014 2.9-.014 3.287 0 .319.19.694.8.577C20.563 21.8 24 17.303 24 12c0-6.627-5.373-12-12-12z"/>
             </svg>
-
-            <h2 class="mt-4 text-xl font-bold text-black">Portfolio Nuxt</h2>
+            <h2 class="mt-4 text-xl font-bold text-black">{{ repository.name }}</h2>
 
             <p class="mt-1 text-md text-gray-800">
-              Mon portfolio personnel créé avec Nuxt.js. Ce site vitrine m'a permis
-              d'explorer en profondeur les fonctionnalités de Nuxt.
-            </p>
-          </a>
-
-          <a
-              class="block rounded-xl border border-gray-300 p-8 shadow-xl transition hover:border-red-500/10 hover:shadow-red-500/10"
-              href="#"
-          >
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="size-10 text-red-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="1"
-            >
-              <g transform="scale(1.1)">
-                <path d="M12 14l9-5-9-5-9 5 9 5z"/>
-                <path
-                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                />
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                />
-              </g>
-            </svg>
-
-            <h2 class="mt-4 text-xl font-bold text-black">À suivre</h2>
-
-            <p class="mt-1 text-md text-gray-800">
-              D'autres projets viendront à terme compléter cette sélection.
+              {{ repository.description || 'Pas de description disponible' }}
             </p>
           </a>
         </div>
 
-        <div class="mt-12 text-center">
+        <div v-if="data && displayCount < data.length" class="mt-12 text-center">
+          <button
+              @click="loadMore"
+              class="inline-block rounded-full border border-gray-300 border-dashed px-12 py-3 text-md font-medium text-black transition hover:bg-gray-900 hover:text-white focus:outline-none focus:ring focus:ring-yellow-400"
+          >
+            Charger plus de projets
+          </button>
+        </div>
+
+        <div v-if="displayCount > data.length" class="mt-12 text-center">
           <a
               href="https://github.com/axel-vair"
               target="_blank"
