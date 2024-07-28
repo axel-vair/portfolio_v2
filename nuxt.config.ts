@@ -28,7 +28,9 @@ export default defineNuxtConfig({
 
   devtools: {enabled: true},
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "nuxt-icon"],
-
+    colorMode: {
+        classSuffix: ''
+    },
   tailwindcss: {
       cssPath: ['~/assets/css/tailwind.css', {injectPosition: "first"}],
       configPath: 'tailwind.config',
