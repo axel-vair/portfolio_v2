@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import socialLinks from "~/content/static/social-links.json";
+import socialLinks from "~~/content/static/social-links.json";
 
 const { error, pending, data } = await useFetch('https://api.github.com/users/axel-vair/repos')
 const displayCount = ref(6)
