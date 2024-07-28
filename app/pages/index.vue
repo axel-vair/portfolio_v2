@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import socialLinks from "~/content/static/social-links.json";
 
-const {error, pending, data} = await useFetch('https://api.github.com/users/axel-vair/repos')
+const { error, pending, data } = await useFetch('https://api.github.com/users/axel-vair/repos')
 const displayCount = ref(6)
 const loadMore = () => {
   displayCount.value += 6;
@@ -77,13 +77,29 @@ const sortedRepositories = computed(() => {
         <img src="/img/vuejs_icon.png" loading="lazy" alt="logo vuejs">
       </div>
     </div>
+
     <section>
       <div class="mx-0 max-w-screen-xl py-8 sm:py-12">
         <div class="mx-auto max-w-lg text-center">
           <h2 class="text-3xl font-bold sm:text-4xl lg:pb-10">Sélection de projets</h2>
         </div>
         <div v-if="pending">Chargement...</div>
-        <div v-else-if="error">Une erreur s'est produite, veuillez réessayer...</div>
+        <div v-else-if="error" class="text-center">
+          <div class="flex flex-col items-center bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+            </svg>
+            <p>Une erreur s'est produite lors de la récupération des projets. Veuillez réessayer plus tard.</p>
+          </div>
+        </div>
+        <div v-else-if="!data || data.length === 0" class="text-center">
+          <div class="flex flex-col items-center bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+            </svg>
+            <p>Aucun projet n'a pu être chargé pour le moment. Veuillez réessayer plus tard.</p>
+          </div>
+        </div>
         <div v-else class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <a
               v-for="repository in sortedRepositories.slice(0, displayCount)"
@@ -132,7 +148,7 @@ const sortedRepositories = computed(() => {
           </button>
         </div>
 
-        <div v-if="displayCount > data.length" class="mt-12 text-center">
+        <div v-if="data && displayCount >= data.length" class="mt-12 text-center">
           <a
               href="https://github.com/axel-vair"
               target="_blank"
