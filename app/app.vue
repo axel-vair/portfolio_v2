@@ -1,4 +1,16 @@
 <script setup lang="ts">
+useHead({
+  htmlAttrs: {
+    lang: 'fr'
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
+  ]
+})
 useSeoMeta({
   title: "Portfolio d'Axel Vair",
   ogTitle: "Portfolio d'Axel Vair",
@@ -12,6 +24,8 @@ useSeoMeta({
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterImage: 'https://axelvair.fr/ogimage.svg',
+  twitterTitle: "Portfolio d'Axel Vair",
+  twitterDescription: 'Axel Vair est un développeur web et mobile full stack basé sur Marseille. Il a une expérience variée et une soif d\'apprendre qui lui permet de réaliser des projets de qualité.'
 })
 </script>
 
