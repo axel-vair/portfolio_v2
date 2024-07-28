@@ -2,7 +2,8 @@
 </script>
 
 <template>
-  <header class="sticky h-18 top-0 border-b border-gray-200 dark:border-gray-700 py-4 bg-gray-100 dark:bg-gray-700 bg-opacity-80 backdrop-blur-md font-medium z-10">
+  <header class="sticky h-18 top-0 border-b border-gray-200 dark:border-gray-700
+  py-4 bg-gray-100 dark:bg-gray-700 bg-opacity-80 backdrop-blur-md font-medium z-10">
     <div class="px-5 max-w-6xl mx-auto flex items-center justify-between gap-10">
       <NuxtLink to="/" aria-label="Accueil">
         <div class="logo-container">
@@ -13,17 +14,17 @@
           </svg>
         </div>
       </NuxtLink>
-      <nav class="-mr-3">
-        <NuxtLink class="p-3 text-gray-800 dark:text-gray-300 hover:text-gray-600 dark:hover:text-gray-400 " to="/">
+      <nav class="flex items-center gap-5">
+        <NuxtLink class="p-3 text-gray-800 dark:text-gray-300 hover:text-gray-600 dark:hover:text-gray-400" to="/">
           À propos
         </NuxtLink>
         <NuxtLink class="p-3 text-gray-800 dark:text-gray-300 hover:text-gray-600 dark:hover:text-gray-400" to="/blog">
           Blog
         </NuxtLink>
+        <ColorModeSelector />
       </nav>
     </div>
-  </header>
-</template>
+  </header></template>
 
 <style scoped>
 .router-link-exact-active {
