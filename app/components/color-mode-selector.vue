@@ -3,7 +3,7 @@
     <button @click="toggleMode" @mouseenter="showNextModelLabel = true" @mouseleave="showNextModelLabel = false"
             class="hover:bg-gray-200 dark:hover:bg-gray-600 px-2 py-1 text-gray-500">{{ nextModeIcon }}
     </button>
-    <span class="ml-3 text-gray-500 text-xs">{{ nextMode }}</span>
+    <span class="text-gray-500 text-xs">{{ nextMode }}</span>
 
   </div>
 </template>
@@ -14,12 +14,12 @@ const colorMode = useColorMode()
 const modes = [
   'light',
   'dark',
-  'system'
+  'auto'
 ]
 const nextModeIcons = {
   light: '🌕',
   dark: '🌑',
-  system: '🌗'
+  auto: '🌗'
 }
 const nextMode = computed(() => {
   const currentModeIndex = modes.indexOf(colorMode.preference)
