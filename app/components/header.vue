@@ -21,7 +21,9 @@
         <NuxtLink class="p-3 text-gray-800 dark:text-gray-300 hover:text-gray-600 dark:hover:text-gray-400" to="/blog">
           Blog
         </NuxtLink>
-        <ColorModeSelector />
+        <ClientOnly>
+          <ColorModeSelector/>
+        </ClientOnly>
       </nav>
     </div>
   </header></template>

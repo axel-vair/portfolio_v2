@@ -1,6 +1,6 @@
 ---
-title: 'Second'
-description: 'Le deuxième article de mon blog.'
+title: 'third'
+description: 'Le troisème article de mon blog.'
 head:
   meta:
     - name: 'Introduction blog'
@@ -13,7 +13,7 @@ head:
       content: '© 2024 axelvair.fr'
     - name: 'og:title'
       content: 'Bienvenue sur axelvair.fr'
-publishedAt: 2023-07-05 17:00:00
+publishedAt: 2024-07-05 17:00:00
 ---
 
 # Introduction

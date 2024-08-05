@@ -1,26 +1,27 @@
 ---
-title: 'Title of the page'
-description: 'meta description of the page'
+title: 'Introduction'
+description: 'Le premier article de mon blog. Il introduit ce que je souhaite faire de cette partie de mon site. '
 head:
   meta:
-    - name: 'keywords'
-      content: 'nuxt, vue, content'
+    - name: 'Introduction blog'
+      content: 'blog, contenu'
     - name: 'robots'
       content: 'index, follow'
     - name: 'author'
-      content: 'NuxtLabs'
+      content: 'Axel Vair'
     - name: 'copyright'
-      content: '© 2022 NuxtLabs'
+      content: '© 2024 axelvair.fr'
     - name: 'og:title'
-      content: 'This is an OpenGraph title'
+      content: 'Bienvenue sur axelvair.fr'
+publishedAt: 2024-08-04 04:34:00
 ---
 
-First post on our website
-## Introduction
-This is some text. *This is italic*.
+# Introduction
 
+Vous voilà sur le premier article de mon blog.
 ## Second Part
-Something more. **This is bold**.
+Something more. **Thi
+s is bold**.
 
 ### Also try lists
 Unordered lists:
