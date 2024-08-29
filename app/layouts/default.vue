@@ -4,12 +4,11 @@
 <template>
   <!-- Header -->
   <Header/>
-
   <!-- Output the page content -->
-  <div class="px-5 max-w-6xl mx-auto my-20 lg:my-32 bg-background text-foreground">
+  <main class="px-5 max-w-6xl mx-auto my-20 lg:my-32 bg-background text-foreground">
     <NuxtPage/>
-  </div>
-
+    <slot/>
+  </main>
   <!-- Footer -->
   <Footer/>
 </template>

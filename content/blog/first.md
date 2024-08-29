@@ -14,9 +14,12 @@ head:
     - name: 'og:title'
       content: 'Bienvenue sur axelvair.fr'
 publishedAt: 2024-08-04 04:34:00
+toc: true
 ---
 
 # Introduction
+
+## First Part
 
 Vous voilà sur le premier article de mon blog.
 ## Second Part
