@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import socialLinks from "~/content/static/social-links.json";
+import socialLinks from "~~/content/static/social-links.json";
 
 const { error, pending, data } = await useFetch('https://api.github.com/users/axel-vair/repos')
 const displayCount = ref(6)
@@ -28,7 +28,7 @@ const colorMode = useColorMode();
   >
   </PageHeader>
 
-  <main class="bg-background text-foreground">
+  <div class="bg-background text-foreground">
     <section>
       <Grid class="my-20 gap-y-20 text-xl">
         <div class="col-span-3">
@@ -209,7 +209,7 @@ const colorMode = useColorMode();
         </div>
       </div>
     </section>
-  </main>
+  </div>
 </template>
 
 <style scoped>
