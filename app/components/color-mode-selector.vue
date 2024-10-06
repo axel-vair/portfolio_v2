@@ -14,12 +14,12 @@ const colorMode = useColorMode()
 const modes = [
   'light',
   'dark',
-  'auto'
+  // 'auto'
 ]
 const nextModeIcons = {
   light: '🌕',
   dark: '🌑',
-  auto: '🌗'
+  // auto: '🌗'
 }
 const nextMode = computed(() => {
   const currentModeIndex = modes.indexOf(colorMode.preference)
