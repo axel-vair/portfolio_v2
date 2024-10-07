@@ -6,7 +6,7 @@ const { data } = await useAsyncData(
     'blog-list',
     () => queryContent('/blog')
         .where({ _path: { $ne: '/blog' } })
-        .only(['_path', 'title', 'publishedAt'])
+        .only(['_path', 'title', 'publishedAt', 'description'])
         .sort({ publishedAt: -1 })
         .find()
 );
@@ -47,6 +47,9 @@ const posts = computed(() => {
           <h3 class="mt-4 text-xl font-bold text-black dark:text-foreground">
             {{ post.title }}
           </h3>
+          <p class="mt-1 text-md text-gray-800 dark:text-muted-foreground">
+            {{ post.description || 'Pas de description disponible' }}
+          </p>
           <p :class="{ 'text-white group-hover:text-gray-100 dark:text-gray-900 dark:group-hover:text-gray-800': !post.displayYear, 'text-gray-400 dark:text-gray-500': post.displayYear }">
             {{ post.year || 'Pas d\'année de publication' }}
           </p>
