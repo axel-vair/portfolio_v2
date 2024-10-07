@@ -84,7 +84,7 @@ const colorMode = useColorMode();
       </div>
 
       <!-- Div pour le mode sombre -->
-      <div v-else class="flex ml-20 mx-auto mb-20 sm:flex">
+      <div v-if="colorMode.value === 'dark'" class="flex ml-20 mx-auto mb-20 sm:flex">
         <div class="hidden sm:block">
           <img src="public/img/dark-angular_logo_icon.png" loading="lazy" alt="logo angular">
         </div>
