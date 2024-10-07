@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import socialLinks from "~~/content/static/social-links.json";
 
-const { error, pending, data } = await useFetch('https://api.github.com/users/axel-vair/repos')
+const {error, pending, data} = await useFetch('https://api.github.com/users/axel-vair/repos')
 const displayCount = ref(6)
 const loadMore = () => {
   displayCount.value += 6;
@@ -17,6 +17,10 @@ const sortedRepositories = computed(() => {
 
 const colorMode = useColorMode();
 
+const { data: articles } = await useAsyncData('home', () =>
+    queryContent('/blog/').sort({ publishedAt: -1 }).find()
+)
+
 </script>
 
 <template>
@@ -27,6 +31,7 @@ const colorMode = useColorMode();
       subtitle="Je suis développeur web full stack depuis 2 ans. Passionné de code et de design, je m'attache à créer des expériences numériques épurées et fluides."
   >
   </PageHeader>
+
 
   <div class="bg-background text-foreground">
     <section>
@@ -111,16 +116,20 @@ const colorMode = useColorMode();
         <div v-if="pending">Chargement...</div>
         <div v-else-if="error" class="text-center">
           <div class="flex flex-col items-center bg-destructive text-destructive-foreground p-4 rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-2" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
             </svg>
             <p>Une erreur s'est produite lors de la récupération des projets. Veuillez réessayer plus tard.</p>
           </div>
         </div>
         <div v-else-if="!data || data.length === 0" class="text-center">
           <div class="flex flex-col items-center bg-destructive text-destructive-foreground p-4 rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mb-2" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
             </svg>
             <p>Aucun projet n'a pu être chargé pour le moment. Veuillez réessayer plus tard.</p>
           </div>
@@ -192,6 +201,63 @@ const colorMode = useColorMode();
       </div>
     </section>
 
+    <hr>
+
+    <!-- ARTICLES -->
+
+    <section>
+      <div class="mx-0 max-w-screen-xl py-8 sm:py-12">
+        <div class="mx-auto max-w-lg text-center">
+          <h2 class="text-primary text-3xl font-bold sm:text-4xl lg:pb-10">Articles de blog</h2>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <nuxt-link
+              v-for="article in articles" :key="article.title"
+              :to="`/blog/${article.title.toLowerCase()}`"
+              target="_blank"
+              class="block rounded-xl border border-gray-300 p-8 shadow-xl transition
+           hover:border-red-500/10 hover:shadow-red-500/10
+           dark:border-border dark:bg-card dark:text-card-foreground
+           dark:hover:border-primary/10 dark:hover:shadow-primary/10"
+          >
+            <div class="flex justify-between items-center">
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="33"
+                  height="33"
+                  class="text-black dark:text-primary"
+              >
+                <path fill="currentColor" d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm0 2l4 4h-4V4z"/>
+              </svg>
+
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="33"
+                  height="33"
+                  class="transition-transform duration-300 ease-in-out hover:translate-x-1
+               hover:text-red-500 dark:hover:text-red-500"
+              >
+                <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none"/>
+                <path d="M12 16l4-4m0 0l-4-4m4 4H8" stroke="currentColor"/>
+              </svg>
+            </div>
+
+            <h2 class="mt-4 text-xl font-bold text-black dark:text-foreground">
+              {{ article.title }}
+            </h2>
+
+            <p class="mt-1 text-md text-gray-800 dark:text-muted-foreground">
+              {{ article.description || 'Pas de description disponible' }}
+            </p>
+          </nuxt-link>
+        </div>
+      </div>
+    </section>
+    <!-- END ARTICLES -->
+
     <section class="rounded-lg bg-secondary p-8 lg:mt-10">
       <h2 class="text-primary mb-5 text-3xl font-bold">Contact</h2>
       <div class="flex flex-col md:flex-row items-center">
@@ -204,7 +270,8 @@ const colorMode = useColorMode();
              class="flex-shrink-0"
              aria-label="Linkedin logo"
           >
-            <Icon name="bxl:linkedin" class="text-muted-foreground hover:text-foreground transition duration-300" size="40"/>
+            <Icon name="bxl:linkedin" class="text-muted-foreground hover:text-foreground transition duration-300"
+                  size="40"/>
           </a>
         </div>
       </div>
