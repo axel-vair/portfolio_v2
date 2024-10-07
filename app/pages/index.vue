@@ -67,38 +67,38 @@ const colorMode = useColorMode();
       <!-- Div pour le mode clair -->
       <div v-if="colorMode.value === 'light'" class="flex ml-20 mx-auto mb-20 sm:flex">
         <div class="hidden sm:block">
-          <img src="/img/angular_logo_icon.png" loading="lazy" alt="logo angular">
+          <img src="public/img/angular_logo_icon.png" loading="lazy" alt="logo angular">
         </div>
         <div class="hidden sm:block">
-          <img src="/img/boot_spring_logo_icon.png" loading="lazy" alt="logo spring boot">
+          <img src="public/img/boot_spring_logo_icon.png" loading="lazy" alt="logo spring boot">
         </div>
         <div class="hidden sm:block">
-          <img src="/img/electron_logo_icon.png" loading="lazy" alt="logo electron">
+          <img src="public/img/electron_logo_icon.png" loading="lazy" alt="logo electron">
         </div>
         <div class="hidden sm:block">
-          <img src="/img/symfony_logo_icon.png" loading="lazy" alt="logo symfony">
+          <img src="public/img/symfony_logo_icon.png" loading="lazy" alt="logo symfony">
         </div>
         <div class="hidden sm:block">
-          <img src="/img/vuejs_icon.png" loading="lazy" alt="logo vuejs">
+          <img src="public/img/vuejs_icon.png" loading="lazy" alt="logo vuejs">
         </div>
       </div>
 
       <!-- Div pour le mode sombre -->
       <div v-else class="flex ml-20 mx-auto mb-20 sm:flex">
         <div class="hidden sm:block">
-          <img src="/img/dark-angular_logo_icon.png" loading="lazy" alt="logo angular">
+          <img src="public/img/dark-angular_logo_icon.png" loading="lazy" alt="logo angular">
         </div>
         <div class="hidden sm:block">
-          <img src="/img/dark-boot_spring_logo_icon.png" loading="lazy" alt="logo spring boot">
+          <img src="public/img/dark-boot_spring_logo_icon.png" loading="lazy" alt="logo spring boot">
         </div>
         <div class="hidden sm:block">
-          <img src="/img/dark-electron_logo_icon.png" loading="lazy" alt="logo electron">
+          <img src="public/img/dark-electron_logo_icon.png" loading="lazy" alt="logo electron">
         </div>
         <div class="hidden sm:block">
-          <img src="/img/dark-symfony_logo_icon.png" loading="lazy" alt="logo symfony">
+          <img src="public/img/dark-symfony_logo_icon.png" loading="lazy" alt="logo symfony">
         </div>
         <div class="hidden sm:block">
-          <img src="/img/dark-vuejs_icon.png" loading="lazy" alt="logo vuejs">
+          <img src="public/img/dark-vuejs_icon.png" loading="lazy" alt="logo vuejs">
         </div>
       </div>
     </div>
