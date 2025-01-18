@@ -37,6 +37,6 @@ J’ai donc décidé de prendre le temps de me renseigner et je me suis rendu co
 ## Conclusion
 En résumé, en prenant le temps de me renseigner j’augmente ma culture informatique, mes compétences, j’évite de ralentir mon terminal, d’augmenter la surface d’attaque de ma machine et je comprends la totalité du code qui tourne. 
 
-**NB**: Retrouvez la configuration de mon zsh qui reprend le thème RobbyRussel et fait appel au plugin zsh-syntax-highlighting sur ce repository geek : https://github.com/axelvair/macadamia
+**NB**: Retrouvez la configuration de mon zsh qui reprend le thème RobbyRussel et fait appel au plugin zsh-syntax-highlighting sur ce repository geek : https://github.com/axel-vair/macadamia
 
 
