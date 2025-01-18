@@ -1,5 +1,5 @@
 ---
-title: 'Ma_vie_sans_Oh_my_zsh'
+title: 'Ma vie sans Oh my zsh'
 description: "Au détour d'une conversation, j'ai pris conscience de ma dépendance à certains outils non nécessaires comme Oh My Zsh par simple effet de mode."
 head:
   meta:
