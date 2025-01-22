@@ -97,29 +97,29 @@ function slugify(text) {
           <img src="public/img/electron_logo_icon.png" loading="lazy" alt="logo electron">
         </div>
         <div class="hidden sm:block">
-          <img src="public/img/symfony_logo_icon.png" loading="lazy" alt="logo symfony">
+          <img class="icons" src="public/img/symfony_logo_icon.png" loading="lazy" alt="logo symfony">
         </div>
         <div class="hidden sm:block">
-          <img src="public/img/vuejs_icon.png" loading="lazy" alt="logo vuejs">
+          <img class="icons" src="public/img/vuejs_icon.png" loading="lazy" alt="logo vuejs">
         </div>
       </div>
 
       <!-- Div pour le mode sombre -->
       <div v-if="colorMode.value === 'dark'" class="flex ml-20 mx-auto mb-20 sm:flex">
         <div class="hidden sm:block">
-          <img src="public/img/dark-angular_logo_icon.png" loading="lazy" alt="logo angular">
+          <img class="icons" src="public/img/dark-angular_logo_icon.png" loading="lazy" alt="logo angular">
         </div>
         <div class="hidden sm:block">
-          <img src="public/img/dark-boot_spring_logo_icon.png" loading="lazy" alt="logo spring boot">
+          <img class="icons" src="public/img/dark-boot_spring_logo_icon.png" loading="lazy" alt="logo spring boot">
         </div>
         <div class="hidden sm:block">
-          <img src="public/img/dark-electron_logo_icon.png" loading="lazy" alt="logo electron">
+          <img class="icons" src="public/img/dark-electron_logo_icon.png" loading="lazy" alt="logo electron">
         </div>
         <div class="hidden sm:block">
-          <img src="public/img/dark-symfony_logo_icon.png" loading="lazy" alt="logo symfony">
+          <img class="icons" src="public/img/dark-symfony_logo_icon.png" loading="lazy" alt="logo symfony">
         </div>
         <div class="hidden sm:block">
-          <img src="public/img/dark-vuejs_icon.png" loading="lazy" alt="logo vuejs">
+          <img class="icons" src="public/img/dark-vuejs_icon.png" loading="lazy" alt="logo vuejs">
         </div>
       </div>
     </div>

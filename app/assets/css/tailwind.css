@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-img {
-  max-width: 35%;
-}
  
 @layer base {
   :root {
