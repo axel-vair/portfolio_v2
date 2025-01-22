@@ -52,7 +52,7 @@ _« So, if someone's developing inside an Android emulator then you can use thi
 
 Ça fait tilte. Eurekâ !
 
-Je remets en place mon environnement de travail habituel pour être certain que ce ne fut pas la cause du problème, et au lieu de faire un appel de mon API avec l’habituel ```http://localhost:8000/api/register``` je fais un appel à : `` http://10.0.2.2:8000/api/register`` (8000 étant le port de mon serveur backend), je relance mon serveur front avec ```npx expo start —tunnel``` … et ça fonctionne !
+Je remets en place mon environnement de travail habituel pour être certain que ce ne fut pas la cause du problème, et au lieu de faire un appel de mon API avec l’habituel ```http://localhost:8000/api/register``` je fais un appel à : ``http://10.0.2.2:8000/api/register`` (8000 étant le port de mon serveur backend), je relance mon serveur front avec ```npx expo start —tunnel``` … et ça fonctionne !
 
 J’avais entendu parler des galères d’Expo mais je ne pensais pas que cela me poserait problème à ce point. Il m’a fallu m’armer de patience pour appréhender le monstre mais je ne cache pas que quelques-uns de mes précieux cheveux n’ont pas résisté. En l’espoir de sauver les cheveux des autres, j’écris cet article. Toi qui me lis, j’espère qu’il te sera utile. 
 
