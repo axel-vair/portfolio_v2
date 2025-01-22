@@ -1,6 +1,6 @@
 ---
 title: "J'EXPOse mes galères"
-description: "Au détour d'une conversation, j'ai pris conscience de ma dépendance à certains outils non nécessaires comme Oh My Zsh par simple effet de mode."
+description: "Je solutionne le rejet de mes requêtes POST j'utilise mon émulateur Android alors que tout fonctionne sur mon navigateur web."
 head:
   meta:
     - name: "J'EXPOse mes galères"
