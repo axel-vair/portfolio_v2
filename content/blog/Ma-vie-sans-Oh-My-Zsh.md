@@ -1,5 +1,5 @@
 ---
-title: 'Ma-vie-sans-Oh-my-zsh'
+title: 'Ma vie sans Oh my zsh'
 description: "Au détour d'une conversation, j'ai pris conscience de ma dépendance à certains outils non nécessaires comme Oh My Zsh par simple effet de mode."
 head:
   meta:
@@ -18,7 +18,7 @@ toc: true
 ---
 # Ma vie sans Oh my zsh
 
-Lorsque j’ai commencé ma formation de développeur web divers outils ont fait le tour de la promotion. Ces outils visaient - assez rarement je dois l’admettre - à améliorer la productivité ou encore à modifier le visuel du terminal. Le terminal fait partie des outils qu’un développeur utilise au quotidien, peut-être même son outil principal. Pour se convaincre de la place centrale de cet outil, il suffit de regarder les programmes d’écoles publiques ou privées qui dans les premières semaines ont pour ambition d’apprendre aux étudiants à naviguer dans ce dernier et à y installer le fameux thème Matrix…
+Lorsque j’ai commencé ma formation de développeur web, divers outils ont fait le tour de la promotion. Ces outils visaient - assez rarement je dois l’admettre - à améliorer la productivité ou encore à modifier le visuel du terminal. Le terminal fait partie des outils qu’un développeur utilise au quotidien, peut-être même son outil principal. Pour se convaincre de la place centrale de cet outil, il suffit de regarder les programmes d’écoles publiques ou privées qui dans les premières semaines ont pour ambition d’apprendre aux étudiants à naviguer dans ce dernier et à y installer le fameux thème Matrix…
 
 ## Le shell et la pop culture
 En plus d’être un outil indispensable, c’est devenu un objet numérique « geek » qui est entré dans la pop culture grâce ou à cause des séries des années 2000. Qui n’a jamais vu Abby de NCIS - ou un autre personnage de fiction de série policière - hacker les serveurs d’une entité étatique en l’espace de quelques secondes en affichant des fichiers HTML ou CSS ? Ainsi, il me semble que notre culture est imprégnée de cet imaginaire et qu’inconsciemment elle a des effets prégnants.

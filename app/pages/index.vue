@@ -21,6 +21,22 @@ const { data: articles } = await useAsyncData('home', () =>
     queryContent('/blog/').sort({ publishedAt: -1 }).find()
 )
 
+function slugify(text) {
+  return text
+      .toString()
+      .normalize('NFD')                   // Normalise les caractères (décompose les caractères accentués)
+      .replace(/[\u0300-\u036f]/g, '')    // Supprime les diacritiques
+      .replace(/'/g, '-')                 // Remplace les apostrophes par des tirets
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, '-')               // Remplace les espaces par des tirets
+      .replace(/[^\w-]+/g, '')            // Supprime tous les caractères non-word sauf les tirets
+      .replace(/--+/g, '-')               // Remplace les tirets multiples par un seul tiret
+      .replace(/^-+/, '')                 // Supprime les tirets au début
+      .replace(/-+$/, '');                // Supprime les tirets à la fin
+}
+
+
 </script>
 
 <template>
@@ -214,7 +230,7 @@ const { data: articles } = await useAsyncData('home', () =>
         <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <nuxt-link
               v-for="article in articles" :key="article.title"
-              :to="`/blog/${article.title.toLowerCase()}`"
+              :to="`/blog/${slugify(article.title)}`"
               target="_blank"
               class="block rounded-xl border border-gray-300 p-8 shadow-xl transition
            hover:border-red-500/10 hover:shadow-red-500/10

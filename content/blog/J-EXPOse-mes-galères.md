@@ -1,5 +1,5 @@
 ---
-title: "J-EXPOse-mes-galères"
+title: "J'EXPOse mes galères"
 description: "Au détour d'une conversation, j'ai pris conscience de ma dépendance à certains outils non nécessaires comme Oh My Zsh par simple effet de mode."
 head:
   meta:
