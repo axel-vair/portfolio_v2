@@ -42,7 +42,11 @@ Je ne peux décemment pas avoir fait un peu de la recherche en littérature, avo
 
 N'hésitez pas à me faire part de vos remarques en cas d'informations erronées, manquantes, peu compréhensibles ou de coquilles. 
 
+[Cliquez ici pour télécharger ou ouvrir le PDF](/files/RNCP_Manuel.pdf){:target="_blank"}
 
 <object data="/files/RNCP_Manuel.pdf" type="application/pdf" width="100%" height="500">
   <p>Si votre navigateur ne prend pas en charge l'affichage de PDF, vous pouvez <a href="/files/RNCP_Manuel.pdf">télécharger le fichier</a>.</p>
 </object>
+
+
+
