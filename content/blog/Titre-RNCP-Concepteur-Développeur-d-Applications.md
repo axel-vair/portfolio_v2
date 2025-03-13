@@ -12,11 +12,11 @@ head:
   - name: "copyright"
     content: '© 2025 axelvair.fr'
   - name: "og:title"
-    content: "J'EXPOse mes galères"
+    content: "Préparer le titre RNCP de Concepteur, Développeur d'Applications"
+  - name: "og:description"
+    content: "Je mets à disposition un livre visant à aider mes camarades de promotion à préparer le titre RNCP31678"
   - name: "og:type"
     content: "article"
-  - name: "og:image"
-    content: '© 2025 axelvair.fr'
   - name: "twitter:card"
     content: "summary_large_image"  
 publishedAt: 2025-03-13 17:00:00
