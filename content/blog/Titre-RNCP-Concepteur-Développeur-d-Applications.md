@@ -43,6 +43,7 @@ Aussi, voici humblement le petit document _- sans prétention ni d'exhaustivité
 N'hésitez pas à me faire part de vos remarques en cas d'informations erronées, manquantes, peu compréhensibles ou de coquilles. 
 
 **Edit du 17/04/25 - Ajout du livre concernant le nouveau titre RNCP.**
+
 **Edit du 22/04/25 - Nouveau plan type, informations dossier projet, questionnaire professionnel, productions, compétences minimales, typo**
 
 
